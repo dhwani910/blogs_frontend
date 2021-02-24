@@ -15,7 +15,8 @@
 
 <script>
 import LandingPage from './components/Landing.vue';
-import Posts from './components/Posts.vue';
+import Posts from '@/components/Posts.vue';
+
 
 
 

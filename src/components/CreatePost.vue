@@ -35,6 +35,7 @@ export default {
                 
             }).then((response) => {
                 console.log(response);
+                this.content = "";
                 this.hide = false;
                 alert("created!!..")
                 // location.reload();

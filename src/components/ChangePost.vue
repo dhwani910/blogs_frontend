@@ -8,7 +8,7 @@
             <button @click="update()" :hide = update_hide>Update</button>
 
         </div> -->
-        <button @click="hide = !hide">want to change ??</button>
+        <button @click="hide = !hide"><i class="fas fa-pen"></i></button>
         <div v-if="!hide">
             <h3>Blog</h3>
             <input type="text" v-model="content">
@@ -16,7 +16,7 @@
 
         </div>
          <button @click="deletePost()">
-            Delete
+            <i class="fas fa-trash-alt"></i>
         </button>
 
     </div>

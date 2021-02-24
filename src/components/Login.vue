@@ -1,5 +1,9 @@
 <template>
     <div class="login">
+        <div class="title">
+            <h2>Already have an account ??</h2>
+            <h3>Login here!</h3>
+        </div>
         <p>Username</p>
         <input type="text" v-model="username" placeholder="name">
         <p>password</p>
@@ -33,7 +37,7 @@ export default {
         login(){
             this.hide = true
             axios.request({
-                url: "http://localhost:5000/blogs",
+                url: "http://localhost:5000/api/login",
                 method: "POST",
                 data: {
                     username: this.username,
@@ -44,7 +48,8 @@ export default {
                 this.success = true;
                 cookies.set("session", response.data.loginToken);
                 cookies.set("userId", response.data.userId);
-                location.reload();
+                // location.reload();
+                alert("Login success")
             }).catch((error) => {
                 console.log(error);
                 this.error = true;
@@ -56,5 +61,8 @@ export default {
 </script>
 
 <style scoped>
+.title{
+    background-color: skyblue;
+}
 
 </style>

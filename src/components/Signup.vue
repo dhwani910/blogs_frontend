@@ -45,6 +45,7 @@ export default {
                 cookies.set("session", response.data.loginToken);
                 cookies.set("userId", response.data.userId);
                 this.success = true;
+                this.$router.push("/feed");
                 alert("account created!")
             }).catch((error) => {
                 console.log(error)
@@ -56,5 +57,8 @@ export default {
 </script>
 
 <style scoped>
+h2{
+    background-color: skyblue;
+}
 
 </style>

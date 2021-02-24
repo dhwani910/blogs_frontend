@@ -81,5 +81,8 @@ export default {
 </script>
 
 <style scoped>
+h1{
+    background-color: skyblue;
+}
 
 </style>

@@ -12,9 +12,11 @@
                   Logout
               </button> -->
         </div>
+
         <signup></signup>
+        <login></login>
         <!-- <signup v-if="signup && userId == undefined"></signup> -->
-        <login v-if="login && userId == undefined"></login>
+        <!-- <login v-if="login && userId == undefined"></login> -->
 
 
     </div>
