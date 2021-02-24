@@ -5,10 +5,11 @@
         <create-post></create-post>
         <button @click="getPosts()">view posts</button>
         <div v-for="post in posts" :key="post[1]">
-            <p>{{ post[1] }}</p>
+            <p>{{ post.content }}</p>
+            <change-post :postId="post.id"></change-post>
         </div>
         <!-- <create-post v-if="loginToken != undefined"></create-post> -->
-        <change-post></change-post>
+        
       
        
 

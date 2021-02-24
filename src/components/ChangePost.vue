@@ -38,12 +38,12 @@ export default {
             // userId: cookies.get("userId"),
         };
     },
-    // props: {
-    //     postId: {
-    //         type: Number,
-    //         required: true
-    //     },
-    // },
+    props: {
+        postId: {
+            type: Number,
+            required: true
+        },
+    },
     methods: {
         updatePost(){
             // this.update_hide = true
@@ -56,7 +56,7 @@ export default {
                 data: {
                     // loginToken: cookies.get("session"),
                     content: this.content,
-                    // id: this.postId
+                    id: this.postId
                 }
             }).then((response) => {
                 console.log(response);
@@ -74,10 +74,10 @@ export default {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                // data: {
-                //     id: this.postId,
-                //     // loginToken: cookies.get("session"),
-                // }
+                data: {
+                    id: this.postId,
+                    // loginToken: cookies.get("session"),
+                }
             }).then((response) => {
                 console.log(response);
                 alert("deleted...")
